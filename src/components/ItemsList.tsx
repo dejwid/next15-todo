@@ -1,9 +1,7 @@
 import {auth} from "@/auth";
 import ItemCheckbox from "@/components/ItemCheckbox";
 import ItemDelete from "@/components/ItemDelete";
-import {Checkbox} from "@/components/ui/checkbox";
 import {PrismaClient} from '@prisma/client';
-import {TrashIcon} from "lucide-react";
 
 export default async function ItemsList() {
   const session = await auth();
