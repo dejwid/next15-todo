@@ -1,5 +1,4 @@
 import ItemDetails from "@/components/ItemDetails";
-import {Button} from "@/components/ui/button";
 import {
   Drawer,
   DrawerContent,
@@ -7,10 +6,7 @@ import {
   DrawerTitle,
   DrawerTrigger
 } from "@/components/ui/drawer";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
 import {Item} from "@prisma/client";
-import {UploadIcon} from "lucide-react";
 
 export default function ItemTitle({item}:{item:Item}) {
   return (
