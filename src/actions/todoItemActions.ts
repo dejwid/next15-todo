@@ -70,7 +70,18 @@ export async function deleteItem(id:string) {
   });
 }
 
-
+export async function updateItem(
+  id:string,
+  data:{title?:string;description?:string;files?:string[]},
+) {
+  await getDb().item.update({
+    where:{
+      id,
+      userEmail: await getUserEmail(),
+    },
+    data,
+  });
+}
 
 
 

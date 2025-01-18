@@ -1,6 +1,7 @@
 import {auth} from "@/auth";
 import ItemCheckbox from "@/components/ItemCheckbox";
 import ItemDelete from "@/components/ItemDelete";
+import ItemTitle from "@/components/ItemTitle";
 import {PrismaClient} from '@prisma/client';
 
 export default async function ItemsList() {
@@ -22,10 +23,10 @@ export default async function ItemsList() {
           className="bg-gray-700/50 p-2 rounded-md flex gap-2 items-center"
           key={item.id}>
           <ItemCheckbox item={item} />
-          <span className="grow">{item.title || '(no title)'}</span>
-          <ItemDelete item={item} />
+          <ItemTitle item={item} />
+          <ItemDelete item={item}/>
         </div>
-      ))}
+        ))}
     </div>
   );
 }
