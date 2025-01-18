@@ -45,7 +45,7 @@ export default function ItemDetails({item}:{item:Item}) {
           Description
         </label>
         <Textarea
-          defaultValue={item.description}
+          defaultValue={item.description || ''}
           name="description"
           placeholder="Add some description about your task..."
           className="block" id="descIn"/>
